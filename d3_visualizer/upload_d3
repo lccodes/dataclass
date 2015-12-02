@@ -1,0 +1,5 @@
+#!/bin/bash
+who=$(whoami)
+mkdir /vol/web/html/d3/${who}
+cp ./*.html /vol/web/html/d3/${who}/index.html
+cp ./*.json /vol/web/html/d3/${who}/flare.json
