@@ -1,0 +1,5 @@
+#!/bin/bash
+cd ../CsvSupplier/src
+javac Supply.java
+java Supply ../../datasets/Congress_113.csv vote_number member_full numerical_vote
+Rscript ../../scripts/simple_senators.R
