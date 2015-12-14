@@ -19,12 +19,14 @@ public class Supply {
 		Set<String> columns = new HashSet<String>();
 		boolean help = false;
 		if (args.length == 0) {
-			System.out.println("usage: <column1> ... <columnN> || -help ");
-		} else if (args.length == 1 && args[0].equals("-help")) {
+			System.out.println("usage: <file> <column1> ... <columnN> || -help ");
+		} else if (args.length == 2 && args[1].equals("-help")) {
+			csvFile = args[0];
 			help = true;
 		} else {
-			for (String a : args) {
-				columns.add(a);
+			csvFile = args[0];
+			for (int i = 1; i < args.length; i++) {
+				columns.add(args[i]);
 			}
 		}
 
